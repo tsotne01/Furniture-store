@@ -18,19 +18,32 @@
                 <img class="search-icon" src="./assets/Search-icon.png" alt="search">
                 <input placeholder="What are you looking for?" type="text" id="search">
             </label>
-            <div class="flex flex-row items-center justify-center gap-1">
-                <button><img class="icon-size" src="./assets/cart.png" alt="cart"></button>
+            <div class="nav-info flex flex-row items-center justify-center gap-1">
+                <button class="relative">
+                    <span class="absolute num-items">0</span>
+
+                    <img class="icon-size" src="./assets/cart.png" alt="cart">
+                </button>
                 <div>
                     <span aria-live="polite">$0.00</span>
                 </div>
-                <button>
+                <button class="relative">
+                    <span class="absolute num-items">0</span>
+
                     <img class="icon-size" src="./assets/Favourite.png" alt="favourites">
                 </button>
                 <button>
                     <img class="icon-size" src="./assets/Profile.png" alt="favourites">
                 </button>
-                <button hidden>
-                   <img class="icon-size" src="./assets/Burger.png" alt="burger">
+
+
+            </div>
+            <div class="flex gap-1 flex-start mr-1">
+                <button class="burger">
+                    <img class="icon-size" src="./assets/Burger.png" alt="burger">
+                </button>
+                <button class="search-sm">
+                    <img src="./assets/Search-icon.png" alt="">
                 </button>
             </div>
         </div>
@@ -42,9 +55,9 @@
                         <div>
                             <img src="./assets/Chairs.png" alt="chairs">
                         </div>
-                        <div class="flex">
+                        <div class="flex items-center gap-1">
                             <span>Chairs</span>
-                            <img src="" alt="">
+                            <img class="arrow-size" src="./assets/arrow-down.png" alt="arrow down">
                         </div>
                     </a>
                 </li>
@@ -53,8 +66,10 @@
                         <div>
                             <img src="./assets/Beds.png" alt="beds">
                         </div>
-                        <div>
+                        <div class="flex items-center gap-1">
                             <span>Beds</span>
+                            <img class="arrow-size" src="./assets/arrow-down.png" alt="arrow down">
+
                         </div>
                     </a>
                 </li>
@@ -63,8 +78,10 @@
                         <div>
                             <img src="./assets/Tables.png" alt="tables">
                         </div>
-                        <div>
+                        <div class="flex items-center gap-1">
                             <span>Tables</span>
+                            <img class="arrow-size" src="./assets/arrow-down.png" alt="arrow down">
+
 
                         </div>
                     </a>
@@ -74,8 +91,10 @@
                         <div>
                             <img src="./assets/Desks.png" alt="desks">
                         </div>
-                        <div>
+                        <div class="flex items-center gap-1">
                             <span>Desks</span>
+                            <img class="arrow-size" src="./assets/arrow-down.png" alt="arrow down">
+
 
                         </div>
                     </a>
@@ -85,8 +104,9 @@
                         <div>
                             <img src="./assets/cabinets.png" alt="cabinets">
                         </div>
-                        <div>
+                        <div class="flex items-center gap-1">
                             <span>Cabinets</span>
+                            <img class="arrow-size" src="./assets/arrow-down.png" alt="arrow down">
 
                         </div>
                     </a>
@@ -96,8 +116,9 @@
                         <div>
                             <img src="./assets/ligh.png" alt="lights">
                         </div>
-                        <div>
+                        <div class="flex items-center gap-1">
                             <span>Lighting</span>
+                            <img class="arrow-size" src="./assets/arrow-down.png" alt="arrow down">
 
                         </div>
                     </a>
