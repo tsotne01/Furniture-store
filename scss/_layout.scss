@@ -80,7 +80,8 @@
 
 
 
-.search {
+.search,
+.search-small {
     width: 70%;
     max-width: 610px;
     border-radius: 6px;
@@ -104,6 +105,19 @@
         border: none;
         outline: none;
     }
+}
+
+.search-small{
+    z-index: 9999999999;
+}
+
+.search-small-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background: #00000044;
 }
 
 .icon-size {
@@ -160,12 +174,45 @@ a:hover {
     color: variables.$color-orange-50;
 }
 
+.underline {
+    border-bottom: 1px solid variables.$color-black--30;
+}
+
+.search-small {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 999;
+}
+
+
+@media (width < variables.$breakpoint-md) {
+    .burger-nav-menu {
+        position: absolute;
+        right: 0;
+        top: 80px;
+        padding: 20px 50px;
+    }
+}
+
+.burger-nav-menu {
+    display: block;
+    animation: slideIn 0.5s ease 0s 1 forwards;
+}
+
+.hidden {
+    display: none;
+}
+
 .nav-popup {
     position: absolute;
     display: none;
     padding: 40px 20px;
     border-radius: 0 0 10px 10px;
     background: white;
+    z-index: 999;
 
     & li {
         margin-bottom: 12px;
@@ -202,21 +249,23 @@ a:hover {
 }
 
 
-.nav-item:hover + .nav-popup + .background,
+.nav-item:hover+.nav-popup+.background,
 .nav-popup:hover+.background {
     display: block;
 }
 
-.popup{
+.popup {
+    z-index: 999;
     animation: showUp 0.7s ease 0s 1 forwards;
 }
-.background .popup{
+
+.background .popup {
     position: absolute;
-    top: 180px;
+    top: 190px;
     left: 0;
     width: 100%;
-    height: min(100%,100rem);
-    background: #00000042;
+    height: min(100%, 100rem);
+    background: #000000cc;
     z-index: -20;
 }
 
@@ -237,7 +286,27 @@ a:hover {
     }
 }
 
-// section{
-//     height: 100vh;
-//     background: #000;
-// }
+.nav-link {
+    font-size: larger;
+    color: variables.$color-blue-32;
+}
+
+main{
+    width: 100%;
+}
+
+.hero-section{
+    margin: 0 auto;
+    width: min(variables.$max-width + 400px, 100%);
+    background: variables.$color-blue-19;
+    border-radius: 20px;
+    height: 35vw;
+    padding: 0 20px;
+    & .hero-background{
+        border-radius: 20px;
+        transform: translateY(15%);
+        z-index: 0;
+    }
+}
+
+

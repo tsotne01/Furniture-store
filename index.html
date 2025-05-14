@@ -11,9 +11,11 @@
 <body>
     <header class="flex flex-col max-width header gap-1">
         <div class="flex justify-between flex-row">
-            <div class="logo">
-                <img class="logo-size" src="./assets/Furniture-logo.webp" alt="furniture">
-            </div>
+            <a href="#!">
+                <div class="logo">
+                    <img class="logo-size" src="./assets/Furniture-logo.webp" alt="furniture">
+                </div>
+            </a>
             <label class="flex bg-sand-50 justify-center items-center search label" for="search">
                 <img class="search-icon" src="./assets/Search-icon.png" alt="search">
                 <input placeholder="What are you looking for?" type="text" id="search">
@@ -233,7 +235,8 @@
 
                 </li>
                 <li>
-                    <a class="sales-nav-item bg-orange-58 nav-item flex items-center justify-center flex-col gap-1" href="#!">
+                    <a class="sales-nav-item bg-orange-58 nav-item flex items-center justify-center flex-col gap-1"
+                        href="#!">
                         <div>
                             <img src="./assets/Star.png" alt="star">
                         </div>
@@ -245,12 +248,32 @@
                 </li>
             </ul>
         </nav>
+        <nav class="burger-nav-menu hidden">
+            <ul class="flex flex-col gap-1">
+                <li><a class="nav-item nav-link underline" href="#!">benve</a></li>
+                <li><a class="nav-item nav-link underline" href="#!">porsche911</a></li>
+                <li><a class="nav-item nav-link underline" href="#!">bakhmaro</a></li>
+                <li><a class="nav-item nav-link underline" href="#!">bakuriani</a></li>
+                <li><a class="nav-item nav-link underline" href="#!">sno</a></li>
+                <li><a class="nav-item nav-link underline" href="#!">mtis wyali</a></li>
+            </ul>
+        </nav>
+        <div class="search-small-overlay hidden">
+            <label class="flex bg-sand-50 justify-center items-center search-small label hidden"
+                for="search-small-device">
+                <img class="search-icon" src="./assets/Search-icon.png" alt="search">
+                <input placeholder="What are you looking for?" type="text" id="search-small-device">
+            </label>
+        </div>
 
     </header>
     <main>
-        <section></section>
+        <section class="hero-section flex items-center justify-center">
+            <img class="hero-background" src="./assets/Hero-background.png" alt="">
+        </section>
     </main>
     <footer></footer>
+    <script defer src="./js/main.js"></script>
 </body>
 
 </html>
