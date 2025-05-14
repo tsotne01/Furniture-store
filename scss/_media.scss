@@ -9,12 +9,8 @@
     .logo-size{
         padding-right: 0;
     }
-    .burger{
-        display: block;
-    }
-    .search-sm{
-        display: block;
-    }
+   
+
 }
 
 @media (width < variables.$breakpoint-md) {
@@ -23,6 +19,12 @@
     }
     .search{
         display: none;
+    }
+    .burger{
+        display: block;
+    }
+    .search-sm{
+        display: block;
     }
 
 }
