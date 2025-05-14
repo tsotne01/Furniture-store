@@ -1,0 +1,109 @@
+@use "./variables";
+@use "./mixins";
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    @extend .flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+
+.max-width {
+    width: variables.$max-width;
+}
+
+.header {
+    margin: 30px auto;
+    max-width: min(variables.$max-width, 100%);
+}
+
+.search-icon {
+    width: 16px;
+    height: 15px;
+}
+
+
+
+.search {
+    width: 70%;
+    max-width: 610px;
+    border-radius: 6px;
+
+    padding: 12px 10px;
+    & img{
+        margin-left: 14px;
+        margin-right: 12px;
+    }
+
+    & input {
+        flex-grow: 1;
+        flex-shrink: 1;
+        padding: 0.2rem;
+        background: inherit;
+        color: variables.$color-azure-19;
+    }
+
+    & input:focus {
+        border: none;
+        outline: none;
+    }
+}
+
+.icon-size {
+    width: 16px;
+    height: 16px;
+}
+
+.logo-size {
+    min-width: 180px;
+    min-height: 30px;
+    padding-right: 50px;
+}
+
+.bg-orange-58{
+    background: variables.$color-orange-58;
+}
+
+.nav-list{
+    & li:last-child a{
+            padding: 15px 51px;
+            border-radius: 3px;
+            color: variables.$color-white-solid;
+    }
+}
+
+
+@for $i from 1 through 30 {
+    .gap-#{$i} {
+        gap:#{$i}rem;
+    }
+}

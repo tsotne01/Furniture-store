@@ -1,0 +1,14 @@
+@use "./variables";
+
+@use "./fonts";
+
+%button{
+    padding: 11px 30px;
+}
+
+.button-primary{
+    @extend %button;
+    @extend %font-sora;
+    color: white;
+    background-color: variables.$color-orange-54;
+}
