@@ -17,4 +17,16 @@
 
 .heading-primary {
     font-size: variables.$heading-size;
+    color: variables.$color-white-solid;
+    font-size: clamp(2.1875rem, 1.5493rem + 2.723vw, 4rem);
+    @extend %font-sora;
+    margin-bottom: 36px;
+    font-weight: 700;
+    max-width: 466px;
+}
+
+.sub-header{
+    @extend %font-sora;
+    color: white;
+    margin-bottom: 20px;
 }
