@@ -43,7 +43,10 @@
 .max-width {
     width: variables.$max-width;
 }
+.header-wrapper{
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 
+}
 .header {
     margin: 30px auto;
     max-width: min(variables.$max-width, 100%);
@@ -327,6 +330,7 @@ main {
         margin: 50px auto;
         border-radius: 20px;
         z-index: 0;
+        max-width: variables.$max-width;
         width: 90%;
         height: 100%;
         padding: 50px;

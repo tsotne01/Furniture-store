@@ -58,3 +58,29 @@
         }
     }
 }
+
+@media (width < variables.$breakpoint-sm) {
+    .hero-section {
+
+        & .hero-background {
+            margin: 0;
+            width: 100%;
+        }
+        .sub-header{
+            margin-bottom: 10px;
+        }
+    
+        .heading-primary{
+            margin-bottom: 15px;
+        }
+    
+        .button-primary{
+            padding: 10px;
+        }
+        .hero-wrapper .hero-background .button-secondary{
+            padding: 10px;
+            font-size: 12px;
+        }
+    }
+    
+}
