@@ -32,3 +32,9 @@
     font-size: clamp(0.5rem, 0.412rem + 0.3756vw, 0.75rem);
     font-weight: 700;
 }
+
+.heading-secondary{
+    @extend %font-sora;
+    font-weight: 700;
+    font-size: 48px;
+}
