@@ -150,6 +150,10 @@
             color: white;
         }
     }
+
+    & li:not(:last-child,:nth-last-child(2)) .nav-item{
+        border-right: 1px solid variables.$color-grey-95;
+    }
 }
 
 .search-sm {
@@ -276,7 +280,7 @@ a:hover {
 
 .background .popup {
     position: absolute;
-    top: 200px;
+    top: 203px;
     left: 0;
     width: 100%;
     height: min(100%, 100rem);

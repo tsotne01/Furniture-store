@@ -29,4 +29,6 @@
     @extend %font-sora;
     color: white;
     margin-bottom: 20px;
+    font-size: clamp(0.5rem, 0.412rem + 0.3756vw, 0.75rem);
+    font-weight: 700;
 }
