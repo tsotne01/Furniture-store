@@ -455,6 +455,7 @@ main {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
+    place-content: center;
     margin-bottom: 100px;
     gap: 10px;
     max-width: 100%;
