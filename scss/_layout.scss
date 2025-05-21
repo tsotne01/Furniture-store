@@ -319,6 +319,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0 33px;
 }
 
 .hero-section {
@@ -379,6 +380,13 @@ main {
         display: flex;
         justify-content: space-between;
 
+        @media (width < variables.$breakpoint-sm) {
+            & {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
         & .products__title {
             display: flex;
             flex-direction: column;
@@ -401,6 +409,7 @@ main {
             display: block;
             color: variables.$color-azure-19;
             font-family: variables.$font-family-font-1;
+            font-weight: 600;
             line-height: 18px;
             font-size: 12px;
             margin-bottom: 20px;
@@ -448,9 +457,11 @@ main {
 
 
 .product__types{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 1fr;
     margin-bottom: 100px;
+    gap: 10px;
     & .product__type-wrapper{
         display: flex;
         flex-direction: column;
