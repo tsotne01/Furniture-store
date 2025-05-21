@@ -417,7 +417,8 @@ main {
 
         & .products__info-block-wrapper {
             display: flex;
-            gap: 50px;
+            width: min(310px, 100%);
+            justify-content: space-between;
         }
 
         & .products__info-block {
@@ -425,25 +426,19 @@ main {
             gap: 30px;
             align-items: center;
 
-            &  .products__info-block-count {
+            & .products__info-block-count {
                 color: variables.$color-azure-19;
                 font-weight: bold;
                 font-size: 24px;
                 font-family: variables.$font-family-font-1;
             }
 
-            &  span{
+            & span {
                 color: variables.$color-grey-39;
                 font-size: 16px;
                 font-family: variables.$font-family-font-2;
                 line-height: 24px;
                 font-weight: 400;
-            }
-
-            & .orange-mark {
-                width: 22px;
-                height: 7px;
-                background-color: variables.$color-orange-49;
             }
         }
     }
@@ -456,13 +451,15 @@ main {
 }
 
 
-.product__types{
+.product__types {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
     margin-bottom: 100px;
     gap: 10px;
-    & .product__type-wrapper{
+    max-width: 100%;
+
+    & .product__type-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -472,11 +469,13 @@ main {
         border-radius: 32px;
         transition: all ease 0.4s;
         cursor: pointer;
-        & img{
+
+        & img {
             width: 80px;
             height: 80px;
         }
-        & span{
+
+        & span {
             font-family: variables.$font-family-font-1;
             font-size: 20px;
             line-height: 28px;
@@ -484,8 +483,89 @@ main {
             font-weight: 600;
         }
     }
-    & .product__type-wrapper:hover{
+
+    & .product__type-wrapper:hover {
         background: white;
         box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     }
+}
+
+.products__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 100px;
+
+    @media (width < variables.$breakpoint-md) {
+        & {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        & .personalized__space-card:first-child {
+            grid-column: span 2;
+        }
+    }
+
+    @media (width < variables.$breakpoint-sm) {
+        & {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        & .personalized__space-card:first-child {
+            grid-column: span 1;
+        }
+    }
+
+
+    & .personalized__space-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        // max-width: 30%;
+        height: 600px;
+        border-radius: 32px;
+        overflow: hidden;
+        padding: 72px 42px;
+        color: white;
+
+
+        & span {
+            font-family: variables.$font-family-font-2;
+            display: block;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        & h2 {
+            font-family: variables.$font-family-font-1;
+            margin-bottom: 20px;
+            font-size: clamp(1.8125rem, 1.4384rem + 1.5962vw, 2.875rem);
+            font-weight: 700;
+            line-height: 44px;
+        }
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+.orange-mark {
+    display: block;
+    width: 22px;
+    height: 7px;
+    background-color: variables.$color-orange-49;
 }

@@ -66,6 +66,9 @@
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 2fr;
     }
+    .product__type-wrapper{
+        padding: 20px 30px;
+    }
 }
 
 @media (width < variables.$breakpoint-sm) {
@@ -97,6 +100,10 @@
     .product__types {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 3fr;
+    }
+
+    .product__type-wrapper{
+        padding: 15px 20px;
     }
 
 }
