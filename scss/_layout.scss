@@ -468,6 +468,7 @@ main {
     margin-bottom: 30px;
 }
 
+
 .ready__for__spring {
     display: flex;
     align-items: center;
@@ -484,6 +485,7 @@ main {
 .products__container {
     max-width: variables.$max-width;
     width: 100%;
+    margin-bottom: 60px;
 
 }
 
@@ -494,10 +496,26 @@ main {
     gap: 24px;
 }
 
+.button-center {
+    margin: 100px auto;
+    margin-top: 0;
+    display: block;
+}
+
+.button-border {
+    border: 1px solid variables.$color-grey-91;
+
+}
+
 .products__card {
     background-color: variables.$color-grey-95;
     padding: 23px;
     position: relative;
+    border-radius: 16px;
+
+    & img {
+        margin: 0 auto;
+    }
 
     & p {
         text-align: center;
