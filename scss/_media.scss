@@ -21,6 +21,7 @@
     .nav-item {
         padding: 0;
     }
+
     .product__types {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 2fr;
@@ -66,12 +67,27 @@
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 2fr;
     }
-    .product__type-wrapper{
+
+    .product__type-wrapper {
         padding: 20px 30px;
     }
 }
 
 @media (width < variables.$breakpoint-sm) {
+
+    .ready__for__spring {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        & > div{
+            width: 100%;
+        }
+
+        &  button{
+            padding: 15px 30px; 
+        }
+    }
+
     .hero-section {
 
         & .hero-background {
@@ -102,7 +118,7 @@
         grid-template-rows: 3fr;
     }
 
-    .product__type-wrapper{
+    .product__type-wrapper {
         padding: 15px 20px;
     }
 
